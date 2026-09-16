@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="hi" class="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <!-- Hardware Kiosk Viewport: Prevents accidental pinch-to-zoom & double-tap scaling -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="theme-color" content="#020617" />
+  <meta name="description" content="MediKiosk - Voice-First Multilingual Clinical Case-Taking Hardware Kiosk for Ayurvedic OPDs. Ministry of Ayush & ABDM Certified (SIH26047)." />
+
+  <title>MediKiosk • Ministry of Ayush OPD Case-Taking Kiosk (SIH26047)</title>
+
+  <!-- Multilingual Typography: Noto Sans Devanagari, Hind & Inter for Hindi/Marathi/English -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+Devanagari:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS Engine CDN with Embedded Medical Kiosk Theme Configuration -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'Noto Sans Devanagari', 'Hind', 'system-ui', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            slate: {
+              750: '#293548',
+              850: '#172033',
+              950: '#020617',
+            },
+            ayush: {
+              emerald: '#10b981',
+              teal: '#14b8a6',
+              gold: '#f59e0b',
+            }
+          },
+          keyframes: {
+            shake: {
+              '0%, 100%': { transform: 'translateX(0)' },
+              '20%, 60%': { transform: 'translateX(-6px)' },
+              '40%, 80%': { transform: 'translateX(6px)' },
+            },
+            fadeIn: {
+              '0%': { opacity: '0', transform: 'translateY(-6px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            }
+          },
+          animation: {
+            shake: 'shake 0.4s ease-in-out',
+            fadeIn: 'fadeIn 0.2s ease-out',
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Kiosk Hardware Experience & Reset CSS -->
+  <style>
+    * {
+      -webkit-tap-highlight-color: transparent;
+      touch-action: manipulation;
+    }
+    html, body {
+      background-color: #020617;
+      color: #f8fafc;
+      overscroll-behavior-y: none;
+      -webkit-user-select: none;
+      user-select: none;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      font-family: 'Inter', 'Noto Sans Devanagari', 'Hind', sans-serif;
+    }
+    input, textarea {
+      -webkit-user-select: text;
+      user-select: text;
+    }
+    /* Hide scrollbars for ultra-clean kiosk look */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #090d16;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1e293b;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #10b981;
+    }
+    @media print {
+      body {
+        background-color: #ffffff !important;
+        color: #000000 !important;
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-slate-950 text-slate-100 antialiased selection:bg-emerald-500 selection:text-slate-950 min-h-screen">
+  
+  <noscript>
+    <div style="padding: 2rem; background: #7f1d1d; color: #ffffff; text-align: center; font-family: sans-serif;">
+      <h2>⚠️ JavaScript Required</h2>
+      <p>MediKiosk operates as an interactive touchscreen kiosk requiring JavaScript to execute voice recognition and Ayurvedic AI case extraction.</p>
+    </div>
+  </noscript>
+
+  <!-- React Kiosk Mount Target -->
+  <div id="root"></div>
+
+  <!-- Vite Entrypoint Script -->
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
+</html>
