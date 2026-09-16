@@ -1,0 +1,73 @@
+node_modules/
+.env
+.env.local
+dist/
+build/
+*.log
+.DS_Store
+__pycache__/
+*.pyc
+.vscode/
+.idea/
+
+
+
+# =========================
+# Node & Dependencies
+# =========================
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+
+# =========================
+# Environment Variables
+# =========================
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# =========================
+# Frontend Build Output
+# =========================
+frontend/dist/
+frontend/build/
+.next/
+out/
+
+# =========================
+# Python & Machine Learning
+# =========================
+__pycache__/
+*.py[cod]
+*$py.class
+.ipynb_checkpoints/
+*.gguf
+*.pt
+*.bin
+fine_tuning/datasets/
+venv/
+env/
+.venv/
+
+# =========================
+# Documentation & AI Context
+# =========================
+Instructions.md
+PROJECT_SPECIFICATION.md
+
+# =========================
+# OS & Editor Files
+# =========================
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
