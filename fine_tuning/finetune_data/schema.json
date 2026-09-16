@@ -1,0 +1,21 @@
+{
+  "condition": "string | null",
+  "condition_hindi": "string | null",
+  "condition_marathi": "string | null",
+  "namaste_code": "string | null",
+  "symptoms": "string[]",
+  "symptom_severity": "string | null",
+  "recommended_tests": "string[]",
+  "risk_factors": "string[]",
+  "doshas": "string[]",
+  "prakriti": "string | null",
+  "ayurvedic_herbs": "string[]",
+  "formulation": "string | null",
+  "diet_lifestyle_recommendations": "string | null",
+  "yoga_and_physical_therapy": "string[]",
+  "medical_intervention": "string[]",
+  "prevention": "string | null",
+  "prognosis": "string | null",
+  "possible_complications": "string[]",
+  "patient_recommendations": "string[]"
+}
