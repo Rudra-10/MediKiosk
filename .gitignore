@@ -71,3 +71,19 @@ Thumbs.db
 *.njsproj
 *.sln
 *.swp
+
+
+
+# Large zip files and model weights
+*.zip
+*.safetensors
+lora_model/
+finetune_data/
+
+# Datasets
+*.csv
+*.jsonl
+
+# Dependencies & Environment
+node_modules/
+.env
